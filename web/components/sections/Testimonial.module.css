@@ -1,0 +1,22 @@
+.root {
+  composes: center from "../../styles/shared.module.css";
+  margin-bottom: 4rem;
+  margin-top: 2rem;
+}
+
+.container {
+  composes: narrow-container from "../../styles/shared.module.css";
+  display: flex;
+}
+
+.figure {
+  margin: 0;
+}
+.photo {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.quote {
+  margin: 1rem 1rem 1rem 1rem;
+}
