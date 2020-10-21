@@ -8,6 +8,8 @@ import schemaTypes from 'all:part:@sanity/base/schema-type';
 import page from './documents/page';
 import route from './documents/route';
 import siteConfig from './documents/siteConfig';
+import post from './documents/post';
+import author from './documents/author';
 
 // Object types
 import cta from './objects/cta';
@@ -17,6 +19,7 @@ import internalLink from './objects/internalLink';
 import link from './objects/link';
 import portableText from './objects/portableText';
 import simplePortableText from './objects/simplePortableText';
+import richText from './objects/richtext';
 
 // Landing page sections
 import hero from './objects/hero';
@@ -43,8 +46,11 @@ export default createSchema({
     portableText,
     route,
     simplePortableText,
+    richText,
     siteConfig,
     textSection,
     testimonial,
+    post,
+    author
   ]),
 });
