@@ -15,6 +15,7 @@ import author from './documents/author';
 import cta from './objects/cta';
 import embedHTML from './objects/embedHTML';
 import figure from './objects/figure';
+import youtube from './objects/youtube';
 import internalLink from './objects/internalLink';
 import link from './objects/link';
 import portableText from './objects/portableText';
@@ -37,6 +38,7 @@ export default createSchema({
     cta,
     embedHTML,
     figure,
+    youtube,
     hero,
     imageSection,
     internalLink,
