@@ -1,12 +1,14 @@
 export default {
   widgets: [
+    // {
+    //   name: 'sanity-tutorials',
+    //   options: {
+    //     templateRepoId: 'sanity-io/sanity-template-nextjs-landing-pages'
+    //   }
+    // },
     {
-      name: 'sanity-tutorials',
-      options: {
-        templateRepoId: 'sanity-io/sanity-template-nextjs-landing-pages'
-      }
+      name: 'structure-menu'
     },
-    {name: 'structure-menu'},
     {
       name: 'project-info',
       options: {

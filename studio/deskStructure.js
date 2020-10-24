@@ -1,10 +1,10 @@
 import S from '@sanity/desk-tool/structure-builder'
-import { MdDashboard, MdSettings, MdAssignment, MdGroup } from "react-icons/md"
+import { MdDashboard, MdSettings, MdAssignment, MdGroup, MdFolderSpecial } from "react-icons/md"
 
 // We filter document types defined in structure to prevent
 // them from being listed twice
 const hiddenDocTypes = listItem =>
-  !['page', 'route', 'site-config', 'post', 'author'].includes(listItem.getId())
+  !['page', 'route', 'site-config', 'post', 'author', 'postCategory'].includes(listItem.getId())
 
 export default () =>
   S.list()
@@ -33,6 +33,11 @@ export default () =>
         .icon(MdAssignment)
         .schemaType('post')
         .child(S.documentTypeList('post').title('Posts')),
+      S.listItem()
+        .title('Post Categories')
+        .icon(MdFolderSpecial)
+        .schemaType('postCategory')
+        .child(S.documentTypeList('postCategory').title('Post Categories')),
       S.listItem()
         .title('Authors')
         .icon(MdGroup)

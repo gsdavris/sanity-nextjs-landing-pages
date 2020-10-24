@@ -1,7 +1,7 @@
 export default {
-  name: 'post',
+  name: 'postCategory',
   type: 'document',
-  title: 'Post',
+  title: 'Post Category',
   fieldsets: [
     {
       title: 'SEO & metadata',
@@ -10,16 +10,16 @@ export default {
   ],
   fields: [
     {
-      name: 'title',
+      name: 'name',
       type: 'string',
-      title: 'Title'
+      title: 'Name',
     },
     {
       title: 'Slug',
       name: 'slug',
       type: 'slug',
       options: {
-        source: 'title',
+        source: 'name',
         maxLength: 200, // will be ignored if slugify is set
         slugify: input => input
                              .toLowerCase()
@@ -28,29 +28,15 @@ export default {
       }
     },
     {
-      name: 'author',
-      type: 'reference',
-      to: [
-        {
-          type: 'author'
-        }
-      ]
-    },
-    {
-      name: 'postCategory',
+      name: 'parentCategory',
       type: 'reference',
       to: [
         {
           type: 'postCategory'
         }
       ],
-      title: 'Category',
-      description: 'Required'
-    },
-    {
-      name: 'body',
-      type: 'richText',
-      title: 'Post Body'
+      title: 'Parent Category',
+      description: 'Optional'
     },
     {
       name: 'description',
@@ -67,11 +53,11 @@ export default {
       fieldset: 'metadata'
     }
   ],
+
   preview: {
     select: {
-      title: 'title',
-      subtitle: 'author.name',
+      title: 'name',
       media: 'openGraphImage'
-    },
-  },
+    }
+  }
 }

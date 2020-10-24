@@ -10,6 +10,7 @@ import route from './documents/route';
 import siteConfig from './documents/siteConfig';
 import post from './documents/post';
 import author from './documents/author';
+import postCategory from './documents/postCategory';
 
 // Object types
 import cta from './objects/cta';
@@ -53,6 +54,7 @@ export default createSchema({
     textSection,
     testimonial,
     post,
+    postCategory,
     author
   ]),
 });
