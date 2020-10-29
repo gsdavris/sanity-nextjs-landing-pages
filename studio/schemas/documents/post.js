@@ -48,6 +48,11 @@ export default {
       description: 'Required'
     },
     {
+      name: 'date',
+      type: 'datetime',
+      title: 'Date'
+    },
+    {
       name: 'body',
       type: 'richText',
       title: 'Post Body'
